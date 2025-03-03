@@ -61,9 +61,8 @@ app.use('/_api', api);
 app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
-let port = process.env.PORT;
+let port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Useful programmer info security app started on port ${port}`);
 });
 module.exports = app;
-helmet.hidePoweredBy();
